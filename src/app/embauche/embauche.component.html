@@ -1,0 +1,6 @@
+<div *ngIf="Personnes">
+    <span *ngFor="let personne of Personnes">
+    <img src="assets/img/{{ personne.path | defaultImage }}" height="35px" />
+    {{ personne.firstname }} {{ personne.name }}
+  </span>
+</div>

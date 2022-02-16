@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="assets/img/{{ personne.path |defaultImage}} " alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{personne.name |titlecase }} {{personne.firstname |titlecase }}</h5>
+        <p class="card-text">{{personne.age}}</p>
+
+
+        <a class="btn btn-primary" (click)="embaucher(personne)">Embaucher</a>
+
+    </div>

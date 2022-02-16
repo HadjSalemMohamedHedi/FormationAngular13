@@ -1,0 +1,4 @@
+<li class="list-group-item" (click)="selectPersonne()">
+    <img src="assets/img/{{ personne.path |defaultImage}}" height="35px" /> {{ personne.firstname }} {{ personne.name }}
+    <button class="btn btn-success" (click)="GoService('mydata')">GO Service</button>
+</li>
