@@ -1,0 +1,21 @@
+<form #formulaire="ngForm">
+
+    <label for="name">Name</label>
+    <input required id="name" type="text" ngModel name="name">
+
+    <label for="first">First</label>
+    <input id="first" type="text" ngModel name="first">
+
+    <label for="job">job</label>
+    <input id="job" type="text" ngModel name="job">
+
+
+    <label for="age">age</label>
+    <input id="age" type="number" ngModel name="age">
+
+    <label for="path">path</label>
+    <input id="path" type="number" ngModel name="path">
+
+    <button class="btn btn-success" (click)="addForm(formulaire)">Valider</button>
+
+</form>

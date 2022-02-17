@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,10 @@ import { EmbaucheComponent } from './embauche/embauche.component';
 import { ROUTING } from './app.routing';
 import { ColorComponent } from './color/color.component';
 import { HeaderComponent } from './header/header.component';
+import { DetailComponent } from './detail/detail.component';
+import { AddcvComponent } from './addcv/addcv.component';
+import { DeletecvComponent } from './deletecv/deletecv.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +28,14 @@ import { HeaderComponent } from './header/header.component';
     DefaultImagePipe,
     EmbaucheComponent,
     ColorComponent,
-    HeaderComponent
+    HeaderComponent,
+    DetailComponent,
+    AddcvComponent,
+    DeletecvComponent,
+    ErrorComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     ROUTING

@@ -8,6 +8,7 @@ import { ActivatedRoute, ChildActivationStart, Router } from '@angular/router';
 })
 export class ColorComponent implements OnInit {
   myColor:"";
+
   constructor(private router: Router,private ActivatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
