@@ -17,6 +17,8 @@ import { DetailComponent } from './detail/detail.component';
 import { AddcvComponent } from './addcv/addcv.component';
 import { DeletecvComponent } from './deletecv/deletecv.component';
 import { ErrorComponent } from './error/error.component';
+import { LoginComponent } from './login/login.component';
+import { ObservableComponent } from './observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ErrorComponent } from './error/error.component';
     DetailComponent,
     AddcvComponent,
     DeletecvComponent,
-    ErrorComponent
+    ErrorComponent,
+    LoginComponent,
+    ObservableComponent
   ],
   imports: [
     FormsModule,

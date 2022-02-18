@@ -6,6 +6,7 @@ import { DeletecvComponent } from './deletecv/deletecv.component';
 import { DetailComponent } from './detail/detail.component';
 import { EmbaucheComponent } from './embauche/embauche.component';
 import { ErrorComponent } from './error/error.component';
+import { LoginComponent } from './login/login.component';
 
 const APP_ROUTING: Routes = [
   { path: '', component: CvComponent },
@@ -17,6 +18,7 @@ const APP_ROUTING: Routes = [
   ]},
 
   { path: 'embaucher', component: EmbaucheComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'color', component: ColorComponent },
   { path: 'color/:default', component: ColorComponent },
   {path:'**',component:ErrorComponent}

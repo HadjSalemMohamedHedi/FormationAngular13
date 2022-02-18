@@ -33,10 +33,12 @@
                     <a class="nav-link " [routerLink]="['color']" routerLinkActive="active">Color</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" routerLinkActive="active" [routerLink]="['login']">Login</a>
+                </li>
+            </ul>
+
         </div>
     </div>
 </nav>
