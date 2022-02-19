@@ -19,6 +19,9 @@ import { DeletecvComponent } from './deletecv/deletecv.component';
 import { ErrorComponent } from './error/error.component';
 import { LoginComponent } from './login/login.component';
 import { ObservableComponent } from './observable/observable.component';
+import { HttpComponent } from './http/http.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AlldetailsComponent } from './alldetails/alldetails.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +39,15 @@ import { ObservableComponent } from './observable/observable.component';
     DeletecvComponent,
     ErrorComponent,
     LoginComponent,
-    ObservableComponent
+    ObservableComponent,
+    HttpComponent,
+    AlldetailsComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     ROUTING
   ],
   providers: [],

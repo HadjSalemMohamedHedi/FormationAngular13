@@ -1,62 +1,55 @@
 import { Injectable } from '@angular/core';
 import { Personne } from '../Models/Personne';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CvService {
   personnes: Personne[];
-  constructor() {
-    this.personnes = [
+  PersonnesFake: Personne[];
+  link = 'http://localhost:3000/api/n';
+
+  constructor(private http: HttpClient) {
+    this.personnes = [];
+    this.PersonnesFake = [
       new Personne(
-        '1',
-        'hedi',
-        'haj salem',
-        '27',
-        'hedi.jpg',
-        '117371844',
-        'ingénieur'
+        '7',
+        'tes 2',
+        'first 3',
+        '55',
+        'fake.jpg',
+        '11447788',
+        'testeurfaje'
       ),
-      new Personne(
-        '2',
-        'zidan',
-        ' zineddin',
-        '28',
-        'zidan.jpg',
-        '11771844',
-        'Joueur'
-      ),
-      new Personne(
-        '3',
-        'mohamed',
-        'haj ',
-        '27',
-        'hedi.jpg',
-        '117371844',
-        'testeur'
-      ),
-      new Personne('4', 'dedi', 'ded ', '27', '', '117371844', 'no job'),
     ];
   }
 
-  getCv(): Personne[] {
-    return this.personnes;
+  getCv(): Observable<Personne[]> {
+    return this.http.get<Personne[]>(this.link);
   }
 
-  getPersonneById(id: any): any {
-    var personne = this.personnes.find((personne) => {
-      return personne.id == id;
-    });
-    return personne;
+  getFakePersonne() {
+    return this.PersonnesFake;
   }
 
+  getPersonneById(id: any): Observable<Personne> {
+   return this.http.get<Personne>(this.link+'/'+id)
+  }
 
-addCv(MyPersonne:Personne){
-  console.log("MyPersonne")
-  console.log(MyPersonne)
-  MyPersonne.id=this.personnes[this.personnes.length-1].id +1;
-  this.personnes.push(MyPersonne)
-}
+  addCv(MyPersonne: Personne):Observable<any> {
+    const token = localStorage.getItem("token");
+    if(token){
+          const params = new HttpParams().set("access_token",token);
+          return this.http.post(this.link,MyPersonne,{params});
+    }
+    return this.http.post(this.link,MyPersonne);
 
+  }
+
+  deletePersonne(id: any) {
+    return this.http.delete(this.link+'/'+id)
+   }
 
 }

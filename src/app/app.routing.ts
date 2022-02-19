@@ -1,5 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 import { AddcvComponent } from './addcv/addcv.component';
+import { AlldetailsComponent } from './alldetails/alldetails.component';
 import { ColorComponent } from './color/color.component';
 import { CvComponent } from './cv/cv.component';
 import { DeletecvComponent } from './deletecv/deletecv.component';
@@ -21,6 +22,7 @@ const APP_ROUTING: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'color', component: ColorComponent },
   { path: 'color/:default', component: ColorComponent },
+  { path: 'alldetails/:id', component: AlldetailsComponent },
   {path:'**',component:ErrorComponent}
 ];
 

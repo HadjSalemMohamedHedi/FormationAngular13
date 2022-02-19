@@ -16,7 +16,19 @@ export class AddcvComponent implements OnInit {
 
 
   addCv(formulaire: NgForm) {
-    this.CvService.addCv(formulaire.value);
-    this.router.navigate(['cv'])
+   /* this.CvService.addCv(formulaire.value);
+    this.router.navigate(['cv'])*/
+
+    this.CvService.addCv(formulaire.value).subscribe(
+      (res)=>{
+        this.router.navigate(['cv'])
+      },
+      (eur)=>{
+        alert('Eurrur 500')
+      },
+      ()=>{
+
+      }
+    )
   }
 }

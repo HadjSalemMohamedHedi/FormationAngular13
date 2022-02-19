@@ -17,9 +17,19 @@ personne: Personne;
   ) { }
 
   ngOnInit(): void {
-    this.ActivatedRoute.params.subscribe((params)=>{
+    /*this.ActivatedRoute.params.subscribe((params)=>{
      this.personne = this.CvService.getPersonneById(params['id'])
-    })
+    })*/
+
+    this.ActivatedRoute.params.subscribe(
+      (params)=>{
+        this.CvService.getPersonneById(params['id']).subscribe(
+          (response)=>{
+            this.personne=response;
+          }
+        )
+      }
+    )
   }
 
 }

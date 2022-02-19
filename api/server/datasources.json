@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "hedidb": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "hedidb",
+    "password": "",
+    "name": "hedidb",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

@@ -20,7 +20,7 @@ export class DetailcvComponent implements OnInit {
   }
 
   moreInfo() {
-    const link = ['cv', this.personne.id];
+    const link = ['alldetails', this.personne.id];
     this.router.navigate(link)
   }
 }
