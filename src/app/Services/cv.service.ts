@@ -39,11 +39,7 @@ export class CvService {
   }
 
   addCv(MyPersonne: Personne):Observable<any> {
-    const token = localStorage.getItem("token");
-    if(token){
-          const params = new HttpParams().set("access_token",token);
-          return this.http.post(this.link,MyPersonne,{params});
-    }
+
     return this.http.post(this.link,MyPersonne);
 
   }

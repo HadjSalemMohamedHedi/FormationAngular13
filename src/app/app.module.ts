@@ -22,6 +22,7 @@ import { ObservableComponent } from './observable/observable.component';
 import { HttpComponent } from './http/http.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AlldetailsComponent } from './alldetails/alldetails.component';
+import { LoginInterceptorProvider } from './intercepteurs/login.intercepteur';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,9 @@ import { AlldetailsComponent } from './alldetails/alldetails.component';
     HttpClientModule,
     ROUTING
   ],
-  providers: [],
+  providers: [
+    LoginInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
