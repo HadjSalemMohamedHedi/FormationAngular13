@@ -23,6 +23,10 @@ import { HttpComponent } from './http/http.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AlldetailsComponent } from './alldetails/alldetails.component';
 import { LoginInterceptorProvider } from './intercepteurs/login.intercepteur';
+import { LoginGuard } from './guard/login.guard';
+import { LogOutGuard } from './guard/logout.guard';
+import { UpdatecvComponent } from './updatecv/updatecv.component';
+import { SreachComponent } from './sreach/sreach.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,9 @@ import { LoginInterceptorProvider } from './intercepteurs/login.intercepteur';
     LoginComponent,
     ObservableComponent,
     HttpComponent,
-    AlldetailsComponent
+    AlldetailsComponent,
+    UpdatecvComponent,
+    SreachComponent
   ],
   imports: [
     FormsModule,
@@ -52,7 +58,9 @@ import { LoginInterceptorProvider } from './intercepteurs/login.intercepteur';
     ROUTING
   ],
   providers: [
-    LoginInterceptorProvider
+    LoginInterceptorProvider,
+    LoginGuard,
+    LogOutGuard
   ],
   bootstrap: [AppComponent]
 })

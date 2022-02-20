@@ -1,0 +1,24 @@
+<form #formulaire="ngForm">
+
+    <label for="name">Name</label>
+    <input required id="name" type="text" [(ngModel)]="personne.name" name="name" class="form-control">
+
+    <label for="first">First</label>
+    <input required id="first" type="text" [(ngModel)]="personne.firstname" name="firstname" class="form-control">
+
+    <label for="job">job</label>
+    <input required id="job" type="text" [(ngModel)]="personne.job" name="job" class="form-control">
+
+    <label for="cin">cin</label>
+    <input required id="cin" min="8" max="8" [(ngModel)]="personne.cin" type="text" name="cin" class="form-control">
+
+
+    <label for="age">age</label>
+    <input min="18" max="70" required id="age" [(ngModel)]="personne.age" type="number" name="age" class="form-control">
+
+    <label for="path">path</label>
+    <input required id="path" type="text" [(ngModel)]="personne.path" name="path" class="form-control">
+
+    <button [disabled]="formulaire.invalid" class="btn btn-success" (click)="update()">Valider</button>
+
+</form>

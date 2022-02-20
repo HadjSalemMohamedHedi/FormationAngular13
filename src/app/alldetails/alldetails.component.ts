@@ -41,4 +41,10 @@ this.CvService.deletePersonne(this.Personne.id).subscribe(
 )
   }
 
+  update(id:number){
+    this.router.navigate(['update/'+id])
+
+  }
+
+
 }
